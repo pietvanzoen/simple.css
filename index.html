@@ -22,7 +22,7 @@
 		<p>This is a test page filled with common HTML elements.</p>
 		<nav>
 			<ul>
-				<li><a class="current" href="#text">Text</a></li>
+				<li><a aria-current="page" href="#text">Text</a></li>
 				<li><a href="#embedded">Embedded content</a></li>
 				<li><a href="#forms">Form elements</a></li>
 				<li><a href="https://simplecss.org/">Project homepage</a></li>
@@ -90,14 +90,14 @@
 				<header>
 					<h2>Headings</h2>
 				</header>
-				
+
 					<h1>Heading 1</h1>
 					<h2>Heading 2</h2>
 					<h3>Heading 3</h3>
 					<h4>Heading 4</h4>
 					<h5>Heading 5</h5>
 					<h6>Heading 6</h6>
-				
+
 				<footer>
 					<p><a href="#top">[Top]</a></p>
 				</footer>
@@ -106,13 +106,13 @@
 				<header>
 					<h2>Paragraphs</h2>
 				</header>
-				
+
 					<p>A paragraph (from the Greek paragraphos, “to write beside” or “written beside”) is a
 						self-contained unit of a discourse in writing dealing with a particular point or idea. A
 						paragraph consists of one or more sentences. Though not required by the syntax of any
 						language, paragraphs are usually an expected part of formal writing, used to organize longer
 						prose.</p>
-				
+
 				<footer>
 					<p><a href="#top">[Top]</a></p>
 				</footer>
@@ -121,7 +121,7 @@
 				<header>
 					<h2>Blockquotes</h2>
 				</header>
-				
+
 					<blockquote>
 						<p>A block quotation (also known as a long quotation or extract) is a quotation in a written
 							document, that is set off from the main text as a paragraph, or block of text.</p>
@@ -130,7 +130,7 @@
 							bottom.</p>
 						<cite><a href="#!">Said no one, ever.</a></cite>
 					</blockquote>
-				
+
 				<footer>
 					<p><a href="#top">[Top]</a></p>
 				</footer>
@@ -154,7 +154,7 @@
 				<header>
 					<h2>Lists</h2>
 				</header>
-				
+
 					<h3>Description list</h3>
 					<dl>
 						<dt>Description term</dt>
@@ -233,7 +233,7 @@
 						</li>
 						<li>List Item 3</li>
 					</ul>
-				
+
 				<footer>
 					<p><a href="#top">[Top]</a></p>
 				</footer>
@@ -675,7 +675,7 @@
 				<header>
 					<h2>Code</h2>
 				</header>
-				
+
 					<p><strong>Keyboard input:</strong> <kbd>Cmd</kbd></p>
 					<p><strong>Inline code:</strong> <code>&lt;div&gt;code&lt;/div&gt;</code></p>
 					<p><strong>Sample output:</strong> <samp>This is sample output from a computer program.</samp>
@@ -688,7 +688,7 @@
 	P Q R S T U V W X Y Z [ \ ] ^ _
 	` a b c d e f g h i j k l m n o
 	p q r s t u v w x y z { | } ~ </pre>
-				
+
 				<footer>
 					<p><a href="#top">[Top]</a></p>
 				</footer>
@@ -714,7 +714,7 @@
 				<header>
 					<h2>Inline elements</h2>
 				</header>
-				
+
 					<p><a href="#!">This is a text link</a>.</p>
 					<p><strong>Strong is used to indicate strong importance.</strong></p>
 					<p><em>This text has added emphasis.</em></p>
@@ -736,7 +736,7 @@
 					<p>The <mark>mark element</mark> indicates a highlight.</p>
 					<p>The <var>variable element</var>, such as <var>x</var> = <var>y</var>.</p>
 					<p>The time element: <time datetime="2013-04-06T12:32+00:00">2 weeks ago</time></p>
-				
+
 				<footer>
 					<p><a href="#top">[Top]</a></p>
 				</footer>
@@ -745,7 +745,7 @@
 				<header>
 					<h2>HTML Comments</h2>
 				</header>
-				
+
 					<p>There is comment here:
 						<!--This comment should not be displayed-->
 					</p>
@@ -753,7 +753,7 @@
 					<!--<p><a href="#!">This is a text link. But it should not be displayed in a comment</a>.</p>
 	            <p><strong>Strong is used to indicate strong importance. But, it should not be displayed in a comment</strong></p>
 	            <p><em>This text has added emphasis. But, it should not be displayed in a comment</em></p>-->
-				
+
 				            <footer>
 					<p><a href="#top">[Top]</a></p>
 				</footer>
@@ -767,7 +767,7 @@
 				<header>
 					<h2>Images</h2>
 				</header>
-				
+
 					<h3>Plain <code>&lt;img&gt;</code> element</h3>
 					<p><img src="https://placekitten.com/480/480" alt="Photo of a kitten"></p>
 					<h3><code>&lt;figure&gt;</code> element with <code>&lt;img&gt;</code> element</h3>
@@ -786,7 +786,7 @@
 							<img src="https://placekitten.com/420/420" alt="Photo of a kitten" />
 						</picture>
 					</figure>
-				
+
 				<footer>
 					<p><a href="#top">[Top]</a></p>
 				</footer>
@@ -843,7 +843,7 @@
 				</header>
 				<label for="progress-bar">No attributes (indeterminate)</label>
 				<progress id="progress-bar">progress</progress>
-				<label for="progress-30">30%, max 100%</label>		
+				<label for="progress-30">30%, max 100%</label>
 				<progress id="progress-30" max="100" value="30">30%</progress>
 				<footer>
 					<p><a href="#top">[Top]</a></p>
@@ -1089,6 +1089,12 @@
 						<button type="button">&lt;button type=button&gt;</button>
 						<button type="reset">&lt;button type=reset&gt;</button>
 						<button type="button" disabled>&lt;button disabled&gt;</button>
+					</p>
+					<p>
+						Button group
+						<div role="group">
+							<button>Left</button><button>Middle</button><button>Right</button>
+						</div>
 					</p>
 				</fieldset>
 				<p><a href="#top">[Top]</a></p>
